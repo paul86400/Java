@@ -1,0 +1,21 @@
+import java.io.File;
+import java.io.FilenameFilter;
+
+public class Main {
+    public static void main(String[] args) {
+        File directoryPath = new File("C:\\ [Insert Directory Path here] ");
+
+        //List text files only
+        System.out.println("\n------------Text files------------");
+        File[] files=directoryPath.listFiles(new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith(".txt");
+            }
+        });
+
+        for (File file : files) {
+            System.out.println(file.getName());
+        }
+    }
+}
