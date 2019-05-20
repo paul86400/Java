@@ -1,0 +1,25 @@
+// User input exercise. 
+// This program asks you for your name and tells you how many characters are in your name.
+// Then it asks you for your age and tells you how old you'll be in 2x your age.
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("What is your first name? ");
+        String firstName = scanner.next();
+
+        int length = firstName.length();
+
+        System.out.println("There are " + length + " characters in your name.");
+
+        System.out.println("What is your age? ");
+        int age = scanner.nextInt();
+
+        System.out.println("You've lived "+ age +" years" );
+
+
+        System.out.println("In another " + age + " years you'll be " + age * 2 + " years old." );
